@@ -59,7 +59,7 @@ class TimeEmbedding(nn.Module):
         super().__init__()
         self.dim = dim
         self.linear1 = nn.Linear(dim, dim * 4)
-        self.linear2 = nn.Linear(dim * 4, dim * 4)
+        self.linear2 = nn.Linear(dim * 4, dim)
     
     def forward(self, t):
         # Sinusoidal embedding
